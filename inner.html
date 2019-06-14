@@ -14,7 +14,7 @@
       <li><a href="info.html">Информация</a></li>
       <li><a href="media.html">Фото и Видео</a></li>
       <li><a href="map.html">Карта Штата</a></li>
-      <li><a href="site-navigation-current">Гостиницы</a></li>
+      <li><a class="site-navigation-current">Гостиницы</a></li>
     </ul>
   </nav>
 </header>
@@ -22,10 +22,65 @@
   <h1 class="visually-hidden">Поиск жилья</h1>
   <section class="filter">
     <h2 class="visually-hidden">Фильтр поиска</h2>
-    <!-- Здесь фильтр поиска жилья -->
+    <form class="filter-form" action="" method="get">
+      <div class="filter-form-row">
+        <div class="filter-form-column">
+          <p class="filter-form-column-name">Инфраструктура:</p>
+          <input class="filter-label" type="checkbox" name="" id="swimming-pool" checked>
+          <label for="swimming-pool">Бассейн</label>
+          <input class="filter-label" type="checkbox" name="" id="parking">
+          <label for="parking">Парковка</label>
+          <input class="filter-label" type="checkbox" name="" id="wi-fi">
+          <label for="wi-fi">Wi-fi</label>
+        </div>
+        <div class="filter-form-column">
+          <p class="filter-form-column-name">Тип жилья:</p>
+          <input class="filter-label" type="checkbox" name="" id="hotel" checked>
+          <label for="hotel">Гостиница</label>
+          <input class="filter-label" type="checkbox" name="" id="motel" checked>
+          <label for="motel">Мотель</label>
+          <input class="filter-label" type="checkbox" name="" id="apartment" checked>
+          <label for="apartment">Апартаменты</label>
+        </div>
+        <div class="filter-form-column">
+          <div class="filter-form-column-element">
+            <label for="filter-price">Стоимость в сутки (р):</label>
+            <span class="price-controller">От 0</span>
+            <span class="price-controller">До 3000</span>
+            <input type="range" min="0" max="3000" step="100" id="filter-price" name="filter-price">
+          </div>
+          <div class="filter-form-control">
+            <input class="filter-form-button" type="button" value="Показать">
+          </div>
+        </div>
+      </div>
+    </form>
   </section>
   <section class="catalog">
     <h2 class="visually-hidden">Результаты поиска</h2>
+    <div class="catalog-filter">
+      <div class="catalog-filter-list">
+        <span class="catalog-filter-result">Найдено:</span>
+      </div>
+      <div class="catalog-filter-list-header">
+        <span class="catalog-filter-sort">Сортировка:</span>
+      </div>
+      <div class="catalog-filter-sort-by">
+        <ul class="catalog-sort-by">
+          <li><a class="catalog-filter-current" href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По рейтингу</a></li>
+        </ul>
+      </div>
+      <div class="catalog-sort">
+        <a class="catalog-sort-up" href="#">
+          <img src="img/icon-up-dir.svg" width="11" height="10" alt="Логотип Седона">
+        </a>
+        <a class="catalog-sort-down" href="#">
+          <img src="img/icon-down-dir.svg" width="11" height="10" alt="Логотип Седона">
+        </a>
+      </div>
+    </div>
     <article class="catalog-list">
       <div class="catalog-item-image">
         <img src="img/hotel-picture.jpg" width="135" height="90" alt="Amara Resort & Spa">
